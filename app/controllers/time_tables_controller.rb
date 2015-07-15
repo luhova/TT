@@ -42,18 +42,28 @@ class TimeTablesController < ApplicationController
   end
 
   def update
-  @time_table = TimeTable.find(params[:id])
+    @time_table = TimeTable.find(params[:id])
 
-  respond_to do |format|
-    if @time_table.update_attributes(params[:time_table])
-      format.html  { redirect_to(@time_table,
-                    :notice => 'Time-table was successfully updated.') }
-      format.json  { head :no_content }
-    else
-      format.html  { render :action => "edit" }
-      format.json  { render :json => @time_table.errors,
-                    :status => :unprocessable_entity }
+    respond_to do |format|
+      if @time_table.update_attributes(params[:time_table])
+        format.html  { redirect_to(@time_table,
+                      :notice => 'Time-table was successfully updated.') }
+        format.json  { head :no_content }
+      else
+        format.html  { render :action => "edit" }
+        format.json  { render :json => @time_table.errors,
+                      :status => :unprocessable_entity }
+      end
     end
   end
-end
+
+  def destroy
+    @time_table = TimeTable.find(params[:id])
+    @time_table.destroy
+
+    respond_to do |format|
+      format.html { redirect_to time_tables_url }
+      format.json { head :no_content }
+    end
+  end
 end
