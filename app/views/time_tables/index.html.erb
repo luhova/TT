@@ -1,0 +1,30 @@
+<h2>Listing all time-tables</h2>
+<table>
+  <tr>
+    <th>From</th>
+    <th>To</th>
+    <th>Time</th>
+    <th>Sort</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+ 
+<% @time_tables.each do |tt| %>
+  <tr>
+    <td><%= tt.from %></td>
+    <td><%= tt.to %></td>
+    <td><%= tt.time %></td>
+    <td><%= tt.sort %></td>
+    <td><%= link_to 'Show', tt %></td>
+    <td><%= link_to 'Edit', edit_time_table_path(tt) %></td>
+    <td><%= link_to 'Destroy', tt, :confirm => 'Are you sure?',
+                                   :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+ 
+</br>
+ 
+<%= link_to 'New time-table', new_time_table_path %>

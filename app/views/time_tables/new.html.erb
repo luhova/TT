@@ -1,24 +1,29 @@
 <h2>New Time-table</h2>
 
-<%= form_for :time_table do |f| %>
+<%= form_for :time_table, url: time_tables_path do |f| %>
   <p>
     <%= f.label :from %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :from %>
   </p>
  
   <p>
     <%= f.label :to %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :to %>
   </p>
 
   <p>
   	<%= f.label :time %><br>
-  	<%= f.text_field :time %>
+  	<%= f.time_select :time %>
+  </p>
+
+  <p>
+    <%= f.label :sort %><br>
+    <%= f.text_field :sort %>
   </p>
  
   <p>
     <%= f.submit %>
   </p>
 <% end %>
-
-<%= form_for :article, url: articles_path do |f| %>
+ 
+<%= link_to 'Back', time_tables_path %>
