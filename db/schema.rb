@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(:version => 20150714110636) do
   create_table "time_tables", :force => true do |t|
     t.string   "from"
     t.string   "to"
-    t.datetime "time"
+    t.time     "time"
     t.string   "transport"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

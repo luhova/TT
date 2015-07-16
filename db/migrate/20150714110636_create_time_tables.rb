@@ -3,7 +3,7 @@ class CreateTimeTables < ActiveRecord::Migration
     create_table :time_tables do |t|
       t.string :from
       t.string :to
-      t.datetime :time
+      t.time :time
       t.string :transport
 
       t.timestamps
