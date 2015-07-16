@@ -15,7 +15,7 @@
   <tr>
     <td><%= tt.from %></td>
     <td><%= tt.to %></td>
-    <td><%= tt.time %></td>
+    <td><%= tt.time.strftime("%H:%M") %></td>
     <td><%= tt.sort %></td>
     <td><%= link_to 'Show', tt %></td>
     <td><%= link_to 'Edit', edit_time_table_path(tt) %></td>
