@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(:version => 20150714110636) do
     t.string   "from"
     t.string   "to"
     t.datetime "time"
-    t.string   "sort"
+    t.string   "transport"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

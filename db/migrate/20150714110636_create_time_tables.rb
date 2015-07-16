@@ -4,7 +4,7 @@ class CreateTimeTables < ActiveRecord::Migration
       t.string :from
       t.string :to
       t.datetime :time
-      t.string :sort
+      t.string :transport
 
       t.timestamps
     end

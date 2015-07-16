@@ -4,7 +4,7 @@
     <th>From</th>
     <th>To</th>
     <th>Time</th>
-    <th>Sort</th>
+    <th>Transport</th>
     <th></th>
     <th></th>
     <th></th>
@@ -16,7 +16,7 @@
     <td><%= tt.from %></td>
     <td><%= tt.to %></td>
     <td><%= tt.time.strftime("%H:%M") %></td>
-    <td><%= tt.sort %></td>
+    <td><%= tt.transport %></td>
     <td><%= link_to 'Show', tt %></td>
     <td><%= link_to 'Edit', edit_time_table_path(tt) %></td>
     <td><%= link_to 'Destroy', tt, :confirm => 'Are you sure?',
