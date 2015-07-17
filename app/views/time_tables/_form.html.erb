@@ -16,7 +16,7 @@
 
   <p>
     <%= f.label :transport %><br>
-    <%= f.text_field :transport %>
+    <%= f.select :transport, [['Bus','Bus'],['Train','Train'],['Shuttle','Shuttle']] %>
   </p>
  
   <p>
