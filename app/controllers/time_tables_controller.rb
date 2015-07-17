@@ -66,4 +66,8 @@ class TimeTablesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def search
+    @time_tables = TimeTable.search(params[:search_from], params[:search_to]) || []
+  end
 end
