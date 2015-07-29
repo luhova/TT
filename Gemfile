@@ -6,7 +6,7 @@ gem 'rails', '3.2.22'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-
+gem 'faker'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -23,6 +23,7 @@ gem 'jquery-rails'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl_rails'
 end
 
 gem 'test-unit', '~> 3.0'
